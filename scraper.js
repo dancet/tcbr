@@ -23,7 +23,7 @@ const log = bunyan.createLogger({
 		{
             level: 'trace',
             stream: process.stdout
-        },	    
+        }
     ]	
 
 });
@@ -36,24 +36,19 @@ superagent
 	  		log.error(`An error occurred: ${err}`)
 	  	}
 	  	else {
-	  		
 	  		// scrape the fundraising total
   			const html = res.text;
   			const $ = cheerio.load(html);
   			const fundraisingTotal = $(fundraisingId).text();
 
-			fundraising = {
-				'fundraising_total': fundraisingTotal
-			}
 			// update a local file for reading later
-			fs.writeFile(fundraisingFile, fundraising.fundraising_total, function(err) {
+			fs.writeFile(fundraisingFile, fundraisingTotal, err => {
 			    if(err) {
 			        log.error(`An error occurred writing the total to the file. ${err}`);
 			    }
 		    	else {
-		    		log.info(`Fundraising total (${fundraising.fundraising_total}) updated successfully`);	
+		    		log.info(`Fundraising total (${fundraisingTotal}) updated successfully`);	
 		    	}
-			    
-			}); 
+			});  
 	  	}
 	});
