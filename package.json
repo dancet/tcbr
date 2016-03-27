@@ -1,0 +1,16 @@
+{
+  "name": "donations-pixo",
+  "version": "1.0.0",
+  "description": "Get the total donations made to TCBR via the Pixo site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tom Dance",
+  "license": "ISC",
+  "dependencies": {
+    "bunyan": "^1.8.0",
+    "cheerio": "^0.20.0",
+    "superagent": "^1.8.3"
+  }
+}
