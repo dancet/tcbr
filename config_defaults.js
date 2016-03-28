@@ -28,7 +28,7 @@ config.logger.server = {
     streams: [
         {
             type: 'rotating-file',
-            path: 'fundraising-server.log',
+            path: 'server.log',
             period: '1d'
         },
         {
