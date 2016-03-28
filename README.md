@@ -26,6 +26,9 @@ Basic Amazon Linux AMI. Uses the `tcbr-sydney-2016.pem` file for SSH. To set it 
 - Install PM2: `npm install pm2 -g`
 - Git clone the tcbr repo: `git clone https://github.com/dancet/tcbr.git`
 - NPM install: `cd tcbr && npm i`
+- Create the config file:
+  - For local dev: `var config = module.exports = require('./config_defaults');` in the `config.js` file
+  - For prod: `ln -s config_prod.js config.js` to create a symlink
 
 ### Run the scraper and server ###
 
