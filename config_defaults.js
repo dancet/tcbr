@@ -5,6 +5,7 @@ config.port = 8080;
 config.fundraising_file = 'fundraising-total.txt';
 config.url = 'https://donate.ccia.org.au/campaign/1/townsville-to-cairns-bike-ride-2016';
 config.fundraising_id = '#ItemCampaignCurrent';	// WARNING! This may need to be updated from time to time
+config.sponsorship_fundraising = 36000; // additional fundraising as provided by sponsors (thanks!)
 
 // set up the logger
 config.logger = {};

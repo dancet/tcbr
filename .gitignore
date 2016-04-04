@@ -34,3 +34,5 @@ node_modules
 
 fundraising-total.txt
 config.js
+server.log*.*
+scraper.log*.*

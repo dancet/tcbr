@@ -33,10 +33,10 @@ function getFundraisingTotal(request, reply) {
     fs.readFile(config.fundraising_file, 'utf8', (err, data) => {
         if (err) {
             log.error(`Unable to read ${config.fundraising_file}. ${err}`);
-            reply(0); // default to zero
+            reply(0 + config.sponsorship_fundraising); // default to zero plus the base total
         }
         else {
-            reply(parseInt(data));
+            reply(parseInt(data) + config.sponsorship_fundraising);
         }
     });
 
